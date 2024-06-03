@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <world name="floorplan:icra_brsu_building_c_level_3b">
+    <gravity>0 0 -9.8</gravity>
+    <physics default="0" name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.6 0.6 0.6 1</ambient>
+      <background>0.4 0.4 0.4 1</background>
+      <shadows>false</shadows>
+    </scene>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://icra_brsu_building_c_level_3b</uri>
+      <static>true</static>
+      <pose>-0.0 0.0 0.0 0.0 0.0 0.0</pose>
+    </include>
+    
+    <include>
+      <name>door-instance-11</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>5.291222880221585 39.76682895871661 0.0 0.0 -0.0 2.530727415391777</pose>
+      <plugin name="adversarial_joint_plugin" filename="libadversarial_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_10.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-2</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>-3.576863844486187 22.83044392993724 0.0 0.0 -0.0 -0.6108652381980157</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_1.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-8</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>-1.5916943559909507 29.937004427248695 0.0 0.0 -0.0 2.530727415391777</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_7.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-10</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>-8.474611592203491 20.107179895780778 0.0 0.0 -0.0 2.530727415391777</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_9.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-7</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>1.8497642621153254 34.851916692982655 0.0 0.0 -0.0 2.530727415391777</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_6.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-3</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>2.7324769553753026 31.841116417116158 0.0 0.0 -0.0 -0.6108652381980157</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_2.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-6</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>6.747512009832617 37.57518072713912 0.0 0.0 -0.0 -0.6108652381980157</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_5.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-4</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>17.186603151421643 52.48374793319879 0.0 0.0 -0.0 -0.6108652381980157</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_3.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-9</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>-5.033152974097219 25.02209216151474 0.0 0.0 -0.0 2.530727415391777</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_8.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-5</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>20.628061769527907 57.398660198932745 0.0 0.0 -0.0 -0.6108652381980157</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_4.json</uri>
+      </plugin>
+    </include>
+    
+    <include>
+      <name>door-instance-1</name>
+      <uri>model://door</uri>
+      <static>false</static>
+      <pose>-7.018322462592461 17.91553166420328 0.0 0.0 -0.0 -0.6108652381980157</pose>
+      <plugin name="dynamic_joint_pluginss" filename="libdynamic_joint_plugin.so">
+        <joint>door:joint-door-hinge</joint>
+        <uri>/home/samuel/Documents/SESAME/dynamic-dsl/icra-models/scripts/output/keyframes_door_0.json</uri>
+      </plugin>
+    </include>
+    
+  </world>
+</sdf>

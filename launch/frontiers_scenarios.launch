@@ -1,0 +1,69 @@
+<launch>
+
+    <remap from="/robile_john/scan_front" to="/scan_front" />
+
+    <!-- Rviz -->
+    <arg name="rviz" default="false"/>
+    <arg name="rviz_config" default="$(find robile_gazebo)/config/rviz/robile.rviz"/>
+    <!-- Gazebo -->
+    <arg name="gui" default="false"/>
+    <arg name="paused" default="false"/>
+    <!-- Environment -->
+    <arg name="environment_name" default="frontiers_brsu_building_c"/>
+    <!-- Waypoint dispatcher -->
+    <arg name="frame" default="map"/>
+    <arg name="route_file" default=""/>
+    <!-- AMCL -->
+    <arg name="init_pos_x" default="44.4"/>
+    <arg name="init_pos_y" default="43.85"/>
+    <arg name="init_pos_z" default="0.0"/>
+    <arg name="init_yaw" default="0.0"/>
+    <!-- Map server -->
+    <arg name="map_name" default="$(arg environment_name)" />
+    <!-- Rosbag -->
+    <arg name="record" default="true"/>
+
+    <!-- Scenario -->
+    <arg name="scenario" default=""/>
+    <arg name="robot_config" default="a2s"/>
+    
+    <param name="scenario/id" value="$(arg scenario)"/>
+    <param name="mission/route" value="$(arg route_file)"/>
+    <param name="robots/configuration" value="$(arg robot_config)"/>
+    <param name="environment/id" value="$(arg environment_name)"/>
+
+    <env name="GAZEBO_MODEL_PATH" value="$(find floorplan-dsl-environments)/models:$(find floorplan-dsl-environments)/worlds:$(find floorplan-object-modelling)/output:$(optenv GAZEBO_MODEL_PATH)"/>
+
+    <include file="$(find robile_gazebo)/launch/platform_independent/rviz.launch">
+        <arg name="start_rviz" value="$(arg rviz)"/>
+        <arg name="rviz_config" value="$(arg rviz_config)"/>
+    </include>
+
+    <include file="$(find floorplan-dsl-environments)/launch/$(arg environment_name).launch">
+        <arg name="gazebo_gui" value="$(arg gui)"/>
+        <arg name="paused" value="$(arg paused)"/>
+    </include>
+
+    <include file="$(find robile_gazebo)/launch/4_wheel_platform.launch">
+        <arg name="use_kelo_tulip" value="false"/>
+        <arg name="init_pos_x" value="$(arg init_pos_x)"/>
+        <arg name="init_pos_y" value="$(arg init_pos_y)"/>
+    </include>
+
+    <include file="$(find robile_navigation)/launch/navigation.launch">
+        <arg name="map_file" value="$(find floorplan-dsl-environments)/maps/$(arg map_name)/$(arg map_name).yaml"/>
+        <arg name="initial_pose_x" value="$(arg init_pos_x)"/>
+        <arg name="initial_pose_y" value="$(arg init_pos_y)"/>
+    </include>
+
+    <node pkg="waypoint_dispatcher" type="waypoint_server" name="waypoint_dispatcher" output="screen">
+        <param name="frame" value="$(arg frame)"/>
+    </node>
+
+    <!-- <node pkg="floorplan-dsl-environments" type="simple_exsce_recorder" name="simple_exsce_recorder" if="$(arg record)"/> -->
+
+    <include file="$(find waypoint_dispatcher)/launch/waypoint_client.launch">
+        <arg name="route_file" value="$(find floorplan-dsl-environments)/tasks/frontiers/$(arg route_file).yaml"/>
+    </include>
+</launch>
+
