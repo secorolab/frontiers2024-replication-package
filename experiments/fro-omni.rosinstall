@@ -1,0 +1,32 @@
+- git:
+    local-name: floorplan-dsl-environments
+    uri: git@github.com:secorolab/ortega2024frontiers-replication-package.git
+    version: main
+- git:
+    local-name: floorplan-object-modelling-and-placement
+    uri: git@github.com:secorolab/floorplan-object-modelling-and-placement.git
+    version: master
+- git:
+    local-name: floorplan_gazebo_plugins
+    uri: git@github.com:secorolab/floorplan-gazebo-plugins.git
+    version: main
+- git:
+    local-name: kelo_tulip
+    uri: git@github.com:a2s-institute/kelo_tulip.git
+    version: f06a105
+- git:
+    local-name: robile_description
+    uri: git@github.com:a2s-institute/robile_description.git
+    version: master
+- git:
+    local-name: robile_gazebo
+    uri: git@github.com:secorolab/robile_gazebo.git
+    version: frontiers/main
+- git:
+    local-name: robile_navigation
+    uri: git@github.com:secorolab/robile_navigation.git
+    version: frontiers/fro-omni
+- git:
+    local-name: waypoint_dispatcher
+    uri: git@github.com:argenos/waypoint_dispatcher.git
+    version: frontiers

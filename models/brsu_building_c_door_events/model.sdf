@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="brsu_building_c_door_events">
+    <link name="link">
+      <visual name="visual">
+	    <geometry>
+          <mesh>
+            <uri>model://brsu_building_c_door_events/meshes/brsu_building_c_door_events.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://brsu_building_c_door_events/meshes/brsu_building_c_door_events.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>    
+</link>
+  <static>1</static>
+  </model>
+</sdf>
