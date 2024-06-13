@@ -7,7 +7,7 @@
     <arg name="init_pos_y" default="0.0"/>
     <arg name="init_pos_z" default="0.0"/>
     <arg name="init_yaw" default="0.0"/>
-    <arg name="world_name" value="$(find floorplan-dsl-environments)/worlds/brsu_building_c_static.world"/>
+    <arg name="world_name" default="$(find floorplan-dsl-environments)/worlds/brsu_building_c_static.world"/>
 
     <!-- GAZEBO SETUP ARGUMENTS -->
     <arg name="use_sim_time" default="true"/>
