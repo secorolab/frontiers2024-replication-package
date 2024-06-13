@@ -39,7 +39,8 @@
         <arg name="rviz_config" value="$(arg rviz_config)"/>
     </include>
 
-    <include file="$(find floorplan-dsl-environments)/launch/$(arg environment_name).launch">
+    <include file="$(find floorplan-dsl-environments)/launch/gazebo_world.launch">
+        <arg name="world_name" value="$(find floorplan-dsl-environments)/worlds/$(arg environment_name).world" />
         <arg name="gazebo_gui" value="$(arg gui)"/>
         <arg name="paused" value="$(arg paused)"/>
     </include>
