@@ -1,5 +1,5 @@
 free_thresh: 0.196
-image: icra_brsu_building_c_level_2_map.pgm
+image: brsu_building_c_static.pgm
 negate: 0
 occupied_thresh: 0.65
 origin:
