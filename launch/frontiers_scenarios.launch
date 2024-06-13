@@ -64,7 +64,7 @@
     <!-- <node pkg="floorplan-dsl-environments" type="simple_exsce_recorder" name="simple_exsce_recorder" if="$(arg record)"/> -->
 
     <include file="$(find waypoint_dispatcher)/launch/waypoint_client.launch">
-        <arg name="route_file" value="$(find floorplan-dsl-environments)/tasks/frontiers/$(arg route_file).yaml"/>
+        <arg name="route_file" value="$(find floorplan-dsl-environments)/tasks/$(arg route_file).yaml"/>
     </include>
 </launch>
 
