@@ -3,7 +3,7 @@
 SCENARIO_CONFIG="fro"
 
 # Scenario 1
-for i in {1..5}; do roslaunch --log floorplan-dsl-environments frontiers_scenarios.launch scenario:=scenario1 environment_name:=icra_brsu_building_c_level_2 init_pos_x:=0.0 init_pos_y:=0.0 route_file:=left_long_corridor_task map_name:=brsu_building_c_static robot_config:=$SCENARIO_CONFIG; done
+for i in {1..5}; do roslaunch --log floorplan-dsl-environments frontiers_scenarios.launch scenario:=scenario1 environment_name:=brsu_building_c_static init_pos_x:=0.0 init_pos_y:=0.0 route_file:=left_long_corridor_task map_name:=brsu_building_c_static robot_config:=$SCENARIO_CONFIG; done
 
 # Scenario 2
 for i in {1..5}; do roslaunch --log  floorplan-dsl-environments frontiers_scenarios.launch scenario:=scenario2 environment_name:=icra_brsu_building_c_level_3b init_pos_x:=0.0 init_pos_y:=0.0 route_file:=left_long_corridor_task map_name:=brsu_building_c_static robot_config:=$SCENARIO_CONFIG; done

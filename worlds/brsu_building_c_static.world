@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sdf version="1.6">
-  <world name="floorplan:icra_brsu_building_c_level_2">
+  <world name="floorplan:brsu_building_c_static">
     <gravity>0 0 -9.8</gravity>
     <physics default="0" name="default_physics" type="ode">
       <max_step_size>0.001</max_step_size>
@@ -20,7 +20,7 @@
       <pose>0 0 0 0 0 0</pose>
     </include>
     <include>
-      <uri>model://icra_brsu_building_c_level_2</uri>
+      <uri>model://brsu_building_c_static</uri>
       <static>true</static>
       <pose>-0.0 0.0 0.0 0.0 0.0 0.0</pose>
     </include>
