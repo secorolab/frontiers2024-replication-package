@@ -9,7 +9,7 @@
     <arg name="gui" default="false"/>
     <arg name="paused" default="false"/>
     <!-- Environment -->
-    <arg name="environment_name" default="frontiers_brsu_building_c"/>
+    <arg name="environment_name" default="brsu_building_c_door_events"/>
     <!-- Waypoint dispatcher -->
     <arg name="frame" default="map"/>
     <arg name="route_file" default=""/>
