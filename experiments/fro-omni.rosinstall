@@ -25,7 +25,7 @@
 - git:
     local-name: robile_navigation
     uri: git@github.com:secorolab/robile_navigation.git
-    version: noetic
+    version: fro-omni
 - git:
     local-name: waypoint_dispatcher
     uri: git@github.com:argenos/waypoint_dispatcher.git
