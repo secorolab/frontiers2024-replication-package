@@ -30,12 +30,6 @@
       <uri>model://door</uri>
       <static>false</static>
       <pose>5.291222880221585 39.76682895871661 0.0 0.0 -0.0 2.530727415391777</pose>
-      <!-- <plugin name="adversarial_joint_plugin" filename="libadversarial_joint_plugin.so">
-        <joint>door:joint-door-hinge</joint>
-        <x>1.2</x>
-        <near>0.8</near>
-        <y>0</y>
-      </plugin> -->
     </include>
     
     <include>
