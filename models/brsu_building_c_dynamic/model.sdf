@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="icra_brsu_building_c_level_3b">
+  <model name="brsu_building_c_dynamic">
     <link name="link">
       <visual name="visual">
 	    <geometry>
