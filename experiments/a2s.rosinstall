@@ -1,0 +1,36 @@
+- git:
+    local-name: floorplan-dsl-environments
+    uri: git@github.com:hbrs-sesame/floorplan-dsl-environments.git
+    version: main
+- git:
+    local-name: floorplan-object-modelling-and-placement
+    uri: git@github.com:hbrs-sesame/floorplan-object-modelling-and-placement.git
+    version: main
+- git:
+    local-name: floorplan_gazebo_plugins
+    uri: git@github.com:hbrs-sesame/dynamic-gazebo-plugins.git
+    version: main
+- git:
+    local-name: kelo_tulip
+    uri: git@github.com:a2s-institute/kelo_tulip.git
+    version: master
+- git:
+    local-name: robile_description
+    uri: git@github.com:a2s-institute/robile_description.git
+    version: master
+- git:
+    local-name: robile_gazebo
+    uri: git@github.com:a2s-institute/robile_gazebo.git
+    version: master
+- git:
+    local-name: robile_navigation
+    uri: git@github.com:a2s-institute/robile_navigation.git
+    version: noetic
+- git:
+    local-name: robile_slam
+    uri: git@github.com:a2s-institute/robile_slam.git
+    version: main
+- git:
+    local-name: waypoint_dispatcher
+    uri: git@github.com:argenos/waypoint_dispatcher.git
+    version: frontiers
